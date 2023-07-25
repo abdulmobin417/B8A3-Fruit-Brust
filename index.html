@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Burst</title>
+    <!-- tailwind and daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom styles -->
+    <style>
+      .font-lato {
+        font-family: "Lato", sans-serif;
+      }
+    </style>
+    <!-- custom tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              xs: "411px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-lato">
+    <!-- header section start -->
+    <header class="container mx-auto mt-12 px-2">
+      <nav
+        class="md:bg-[#F85559] flex justify-between items-center xs:px-12 py-8 rounded-[600px]"
+      >
+        <div class="hidden md:block">
+          <ul class="flex gap-8 text-white font-medium items-center">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">All Fruits</a></li>
+          </ul>
+        </div>
+        <div class="flex gap-4 items-center">
+          <img
+            class="h-[30px] w-[28px] md:h-[60px] md:w-[55px]"
+            src="./images/logo.png"
+            alt=""
+          />
+          <h2 class="md:text-[#FFF] text-xl md:text-[40px] font-bold">
+            Fruit Burst
+          </h2>
+        </div>
+        <div>
+          <form class="hidden lg:block">
+            <label class="relative block">
+              <input
+                class="bg-[#FFF] px-7 py-4 text-black placeholder:text-[#12121266] rounded-[50px] xl:w-[400px] focus:outline-none"
+                type="text"
+                placeholder="Search here"
+              />
+              <span class="absolute inset-y-0 right-4 flex items-center pr-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M21 21L15.803 15.803M15.803 15.803C17.2096 14.3965 17.9998 12.4887 17.9998 10.4995C17.9998 8.51035 17.2096 6.60262 15.803 5.19605C14.3965 3.78947 12.4887 2.99927 10.4995 2.99927C8.51035 2.99927 6.60262 3.78947 5.19605 5.19605C3.78947 6.60262 2.99927 8.51035 2.99927 10.4995C2.99927 12.4887 3.78947 14.3965 5.19605 15.803C6.60262 17.2096 8.51035 17.9998 10.4995 17.9998C12.4887 17.9998 14.3965 17.2096 15.803 15.803Z"
+                    stroke="#121212"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </label>
+          </form>
+        </div>
+        <div class="block md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="text-white"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+      </nav>
+      <section class="mt-14 relative">
+        <div>
+          <div class="carousel w-full h-[200px] sm:h-full rounded-lg">
+            <div id="slide1" class="carousel-item relative w-full">
+              <img src="./images/banner1.png" class="w-full" />
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10"
+              >
+                <a
+                  href="#slide3"
+                  class="rounded-full bg-[#121212] border-none w-8 h-8 sm:w-11 sm:h-11 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    class=""
+                  >
+                    <path
+                      d="M18.375 22.75L9.625 14L18.375 5.25"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#slide2"
+                  class="rounded-full bg-[#121212] border-none w-8 h-8 sm:w-11 sm:h-11 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                  >
+                    <path
+                      d="M9.625 5.25L18.375 14L9.625 22.75"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="w-full h-full absolute bg-black opacity-40 z-0"></div>
+              <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              >
+                <div class="text-center">
+                  <h3
+                    class="text-lg xs:text-xl sm:text-2xl lg:text-5xl 2xl:text-7xl text-white font-extrabold md:mb-6"
+                  >
+                    Exotic tastes at your<br />
+                    doorstep
+                  </h3>
+                  <p
+                    class="text-white text-sm sm:text-base md:text-xl mb-2 sm:mb-8 font-medium"
+                  >
+                    We supply highly quality organic products
+                  </p>
+                  <button
+                    class="bg-[#F85559] px-4 sm:px-7 py-3 lg:py-5 text-base md:text-xl text-white font-extrabold rounded-lg"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+              <img src="./images/banner2.png" class="w-full" />
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10"
+              >
+                <a
+                  href="#slide1"
+                  class="rounded-full bg-[#121212] border-none w-8 h-8 sm:w-11 sm:h-11 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    class=""
+                  >
+                    <path
+                      d="M18.375 22.75L9.625 14L18.375 5.25"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#slide3"
+                  class="rounded-full bg-[#121212] border-none w-8 h-8 sm:w-11 sm:h-11 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                  >
+                    <path
+                      d="M9.625 5.25L18.375 14L9.625 22.75"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="w-full h-full absolute bg-black opacity-40 z-0"></div>
+              <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              >
+                <div class="text-center">
+                  <h3
+                    class="text-lg xs:text-xl sm:text-2xl lg:text-5xl 2xl:text-7xl text-white font-extrabold md:mb-6"
+                  >
+                    Exotic tastes at your<br />
+                    doorstep
+                  </h3>
+                  <p
+                    class="text-white text-sm sm:text-base md:text-xl mb-2 sm:mb-8 font-medium"
+                  >
+                    We supply highly quality organic products
+                  </p>
+                  <button
+                    class="bg-[#F85559] px-4 sm:px-7 py-3 sm:py-5 text-base md:text-xl text-white font-extrabold rounded-lg"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+              <img src="./images/banner3.png" class="w-full" />
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-10"
+              >
+                <a
+                  href="#slide2"
+                  class="rounded-full bg-[#121212] border-none w-8 h-8 sm:w-11 sm:h-11 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    class=""
+                  >
+                    <path
+                      d="M18.375 22.75L9.625 14L18.375 5.25"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#slide1"
+                  class="rounded-full bg-[#121212] border-none w-8 h-8 sm:w-11 sm:h-11 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                  >
+                    <path
+                      d="M9.625 5.25L18.375 14L9.625 22.75"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="w-full h-full absolute bg-black opacity-40 z-0"></div>
+              <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              >
+                <div class="text-center">
+                  <h3
+                    class="text-lg xs:text-xl sm:text-2xl lg:text-5xl 2xl:text-7xl text-white font-extrabold md:mb-6"
+                  >
+                    Exotic tastes at your<br />
+                    doorstep
+                  </h3>
+                  <p
+                    class="text-white text-sm sm:text-base md:text-xl mb-2 sm:mb-8 font-medium"
+                  >
+                    We supply highly quality organic products
+                  </p>
+                  <button
+                    class="bg-[#F85559] px-4 sm:px-7 py-3 sm:py-5 text-base md:text-xl text-white font-extrabold rounded-lg"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:block absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div
+              class="flex items-end justify-center gap-8 lg:gap-20 py-4 xl:py-12 px-16 bg-[#FFF] shadow-[0px_8px_60px_0px_rgba(0,0,0,0.05)] max-w-[1196px] rounded-lg"
+            >
+              <div class="flex flex-col justify-center items-center">
+                <img class="h-[50px] lg:h-[80px]" src="./images/fruit1.png" alt="" />
+                <p class="text-[#121212cc] text-xl font-medium">Strawberry</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img class="h-[50px] lg:h-[80px]" src="./images/fruit2.png" alt="" />
+                <p class="text-[#121212cc] text-xl font-medium">Orange</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img class="h-[50px] lg:h-[80px]" src="./images/fruit3.png" alt="" />
+                <p class="text-[#121212cc] text-xl font-medium">Mango</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img class="h-[50px] lg:h-[80px]" src="./images/fruit4.png" alt="" />
+                <p class="text-[#121212cc] text-xl font-medium">Strawberry</p>
+              </div>
+              <div class="flex flex-col justify-center items-center">
+                <img class="h-[50px] lg:h-[80px]" src="./images/fruit5.png" alt="" />
+                <p class="text-[#121212cc] text-xl font-medium">Mango</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- header section end -->
+
+    <!-- main section start -->
+    <main class="container mx-auto mt-64 px-2">
+      <!-- deal section start -->
+      <section>
+        <p>hello</p>
+      </section>
+      <!-- deal section end -->
+    </main>
+    <!-- main section end -->
+  </body>
+</html>
